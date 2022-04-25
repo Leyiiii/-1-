@@ -1,0 +1,37 @@
+#练习一
+j<-(1:1000)          #j为1~1000的整数
+k<-atan(1/j)         #计算j的倒数的反正切
+
+x<-c(1:1000)         #x为1~1000的整数
+y<-atan(1/x)         #计算x的倒数的反正切
+z<-1/tan(y)          #计算y的切线的倒数，并把值赋给变量z
+#练习二
+x==z#用==比较x，z
+identical(x,z)#用identical比较x，z
+all.equal(x,z,tolerance=1)#用all.equal比较x，z。容差为1
+all.equal(x,z,tolerance=0)#容差为0，平均相对差异为1.270335e-16
+#练习三
+true_and_missing<-c(TRUE,NA)
+false_and_missing<-c(FALSE,NA)
+mixed<-c(TRUE,FALSE,NA)#定义三个向量
+any(true_and_missing)
+any(false_and_missing)
+any(mixed)
+all(true_and_missing)
+all(false_and_missing)
+all(mixed)
+#练习四
+a<-sample(50:1000,100)#生成一个带有100个大于50，小于1000的整数的向量
+sum(a)
+mean(a)
+median(a)
+var(a)    #求和，平均数，中位数，方差
+
+d<-atan(1000) #直径
+s<-pi*1/4*d^2#计算圆的面积
+print(s)
+
+p1<-c(2,3)
+p2<-c(13,22)
+p=sqrt((p2[1]-p1[1])^2+(p2[2]-p1[2])^2)#计算欧氏距离
+print(p)
